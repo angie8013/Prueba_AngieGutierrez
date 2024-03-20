@@ -37,16 +37,23 @@
                 </div>
 
                 <!-- div para capturar el nombre -->
-
                 <div class="formulario__grupo-input" id="grupo__id_med">
-                    <label for="id_med" class="formulario__label">Documento del medico*</label>
-                        <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" onkeyup="mayus(this);" name="id_med" id="id_med" placeholder="">
-                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                        </div>
-                        <p class="formulario__input-error">
-                        El documento tiene que ser de 6 a 11 dígitos y solo puede contener numeros.</p>
-                </div>
+                    <label for="id_med" class="formulario__label">Tipo Usuario *</label>
+				    <div class="formulario__grupo-select">                 
+                        <select  name="id_med" id="id_med" class="formulario__select" required>
+                            <!-- <option value="" selected="">** Seleccione Tipo Usuario **</option> -->
+                                <?php
+                                   /*Consulta para mostrar las opciones en el select */
+                                    $statement = $con->prepare('SELECT * from medico WHERE id_med');
+                                    $statement->execute();
+                                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                                      echo "<option value=" . $row['id_med'] . ">" . $row['nom_m'] . "\n" . $row['apel_m'] . "</option>";
+                                    }
+                                ?>
+                        </select>
+                    </div>
+                    
+                </div> 
 
                <!--div para agregar los dos campos correspondientes-->
 

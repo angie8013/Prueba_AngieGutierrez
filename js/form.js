@@ -3,14 +3,12 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	id_pac:/^\d{7,11}$/, 
-	id_med: /^\d{6,11}$/,
 	enf: /^[a-zA-ZÀ-ÿ\s]{3,255}$/
 	
 }
 
 const campos = {
 	id_pac: false,
-	id_med: false,
 	enf: false
 
 	// telefono: false
@@ -21,9 +19,6 @@ const validarFormulario = (e) => {
 	switch (e.target.name) {
 		case "id_pac":
 			validarCampo(expresiones.id_pac, e.target, 'id_pac');
-		break;
-		case "id_med":
-			validarCampo(expresiones.id_med, e.target, 'id_med');
 		break;
 		case "enf":
 			validarCampo(expresiones.enf, e.target, 'enf');	
@@ -65,9 +60,9 @@ formulario.addEventListener('submit', (e) => {
 
 
 	const terminos = document.getElementById('terminos');
-	if(campos.id_pac && campos.id_med && campos.enf && terminos.checked ){
+	if(campos.id_pac && campos.enf && terminos.checked ){
 		formulario.reset();
-		console.log(doc_p);console.log(doc_m);console.log(enfer); console.log(fecha);
+		console.log(doc_p);console.log(enfer); console.log(fecha);
 		$.post ("regis.php?cod=datos",{doc_p: doc_p, doc_m: doc_m, enfer: enfer, fecha: fecha}, function(document){$("#mensaje").html(document);
 		
 		}),
