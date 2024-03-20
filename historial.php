@@ -12,9 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
     <title>Document</title>
 </head>
 <body>
+    <center><H1>HISTORIAL CLINICO</H1></center>
 <body onload="frm_guardar.tipu.focus()">
       <div class="table-responsive-sm section text-center">
       <table class="table table-dark mn-auto">   
@@ -27,11 +32,12 @@
                 <th scope="col">Cedula paciente</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
-                <th scope="col">Correo</th>
                 <th scope="col">Telefono</th>
-                <th scope="col">Contraseña</th>
-                <th scope="col">Cargo</th>
-                <th scope="col"> Tipo de usuario</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Nombre Medico</th>
+                <th scope="col">Apellido Medico</th>
+                <th scope="col"> Fecha y hora de ingreso</th>
+                <th scope="col">Enfermedad consultada</th>
               </tr>
             </thead>
 
