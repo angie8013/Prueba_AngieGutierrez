@@ -56,13 +56,13 @@
                         </div>
                 </div>
 
-               <div class="formulario__grupo-input" id="grupo__enf">
-                    <label for="enf" class="formulario__label">Enfermedad consultada*</label>
+                <div class="formulario__grupo-input" id="grupo__enf">
+                    <label for="enf" class="formulario__label">Documento del medico*</label>
                         <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="enf" id="enf" placeholder="">
+                            <input type="text" class="formulario__input" onkeyup="mayus(this);" name="enf" id="enf" placeholder="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-
+                        <p class="formulario__input-error"></p>
                 </div>
                               
                 </div>  
