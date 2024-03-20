@@ -19,6 +19,8 @@
 
 <body>
    <main>
+    <center>   <h1>REGISTRO DE PACIENTES</h1></center>
+
         <form  method="POST" autocomplete="off" class="formulario" id="formulario">
             
 
@@ -57,7 +59,7 @@
                 </div>
 
                 <div class="formulario__grupo-input" id="grupo__enf">
-                    <label for="enf" class="formulario__label">Documento del medico*</label>
+                    <label for="enf" class="formulario__label">Enfermedad consultada*</label>
                         <div class="formulario__grupo-input">
                             <input type="text" class="formulario__input" onkeyup="mayus(this);" name="enf" id="enf" placeholder="">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
