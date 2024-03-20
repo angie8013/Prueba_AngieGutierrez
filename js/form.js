@@ -1,16 +1,17 @@
-const formulario = document.getElementById('formulario');
+const formul = document.getElementById('form');
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-	id_pac,id_med: /^\d{7,11}$/, 
-	enf: /^[a-zA-ZÀ-ÿ\s]{15,40}$/, 
+	id_pac:/^\d{7,11}$/, 
+	id_med: /^\d{6,11}$/,
+	enf: /^[a-zA-ZÀ-ÿ\s]{3,255}$/
 	
 }
 
 const campos = {
 	id_pac: false,
 	id_med: false,
-	enf: false,
+	enf: false
 
 	// telefono: false
 	
@@ -60,12 +61,14 @@ formulario.addEventListener('submit', (e) => {
 		var doc_p = document.getElementById('id_pac').value;
 		var doc_m = document.getElementById('id_med').value;
 		var enfer = document.getElementById('enf').value;
+		var fecha = document.getElementById('fecha').value;
+
 
 	const terminos = document.getElementById('terminos');
 	if(campos.id_pac && campos.id_med && campos.enf && terminos.checked ){
 		formulario.reset();
-		console.log(doc_p);console.log(doc_m);console.log(enfer);
-		$.post ("registro.php?cod=datos",{doc_p: doc_p, doc_m: doc_m, enfer: enfer}, function(document){$("#mensaje").html(document);
+		console.log(doc_p);console.log(doc_m);console.log(enfer); console.log(fecha);
+		$.post ("regis.php?cod=datos",{doc_p: doc_p, doc_m: doc_m, enfer: enfer, fecha: fecha}, function(document){$("#mensaje").html(document);
 		
 		}),
 		
