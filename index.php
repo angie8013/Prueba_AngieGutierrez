@@ -38,7 +38,7 @@
 
                 <!-- div para capturar el nombre -->
                 <div class="formulario__grupo-input" id="grupo__id_med">
-                    <label for="id_med" class="formulario__label">Tipo Usuario *</label>
+                    <label for="id_med" class="formulario__label">Medico asignado *</label>
 				    <div class="formulario__grupo-select">                 
                         <select  name="id_med" id="id_med" class="formulario__select" required>
                             <!-- <option value="" selected="">** Seleccione Tipo Usuario **</option> -->
